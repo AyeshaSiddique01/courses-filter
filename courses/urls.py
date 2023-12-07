@@ -3,8 +3,8 @@ URLs for courses.
 """
 from django.urls import re_path  # pylint: disable=unused-import
 from django.views.generic import TemplateView  # pylint: disable=unused-import
+from .views import CourseListView
 
 urlpatterns = [
-    # TODO: Fill in URL patterns and views here.
-    # re_path(r'', TemplateView.as_view(template_name="courses/base.html")),
+    re_path(r'/courses/', CourseListView.as_view(), name="courses"),
 ]
